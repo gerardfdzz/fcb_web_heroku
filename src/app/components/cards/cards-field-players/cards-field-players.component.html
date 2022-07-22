@@ -1,0 +1,35 @@
+<div class="itemBox">
+    <a [routerLink]='"fieldPlayer/" + fieldPlayer.name + "/"  + fieldPlayer.id'>
+        <img [src]="fieldPlayer.img">
+
+        <figcaption class="team-person__text">
+            <div class="team-person__info">
+                <p class="team-person__info-top">
+                    <span class="back-name">{{fieldPlayer.backName}}</span>
+                    <span class="player-number" *ngIf="fieldPlayer.number != 0">{{fieldPlayer.number}}</span>
+                    <span class="player-name" *ngIf='fieldPlayer.surname != ""'>{{fieldPlayer.name}}</span>
+                    <span class="player_last-name" *ngIf='fieldPlayer.surname == ""'>{{fieldPlayer.name}}</span>
+                    <span class="player_last-name" *ngIf='fieldPlayer.surname != ""'>{{fieldPlayer.surname}}</span>
+                </p>
+                <ul class="team-person__info-bottom">
+                    <li class="player-position">{{ 'team.' + fieldPlayer.position | translate }}</li>
+                </ul>
+            </div>
+
+            <div class="team-person__stats">
+                <div class="stats">
+                    <p class="stats_title">{{ 'team.games' | translate }}</p>
+                    <p class="stats_number">{{fieldPlayer.games}}</p>
+                </div>
+                <div class="stats">
+                    <p class="stats_title">{{ 'team.goals' | translate }}</p>
+                    <p class="stats_number">{{fieldPlayer.goals}}</p>
+                </div>
+                <div class="stats">
+                    <p class="stats_title">{{ 'team.assists' | translate }}</p>
+                    <p class="stats_number">{{fieldPlayer.assists}}</p>
+                </div>
+            </div>
+        </figcaption>
+    </a>
+</div>

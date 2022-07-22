@@ -1,0 +1,19 @@
+<div class="itemBox">
+    <img [src]="coach.img">
+
+    <figcaption class="team-person__text">
+        <div class="team-person__info">
+            <p class="team-person__info-top">
+                <span class="back-name">{{coach.backName}}</span>
+                <span class="coach-number" *ngIf="coach.number != 0">{{coach.number}}</span>
+                <span class="coach-name" *ngIf='coach.surname != ""'>{{coach.name}}</span>
+                <span class="coach_last-name" *ngIf='coach.surname == ""'>{{coach.name}}</span>
+                <span class="coach_last-name" *ngIf='coach.surname != ""'>{{coach.surname}}</span>
+            </p>
+            <ul class="team-person__info-bottom">
+                <li class="coach-position">{{ 'team.' + coach.position | translate }}</li>
+            </ul>
+        </div>
+    </figcaption>
+
+</div>

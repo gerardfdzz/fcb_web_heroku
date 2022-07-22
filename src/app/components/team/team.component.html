@@ -1,0 +1,65 @@
+<main class="team_page">
+    <div class="team_page_hero">
+        <div class="static_hero">
+            <h1 class="title"> {{ 'header.title' | translate }} </h1>
+            <p class="subtitle"> {{ 'header.subtitle' | translate }} </p>
+        </div>
+    </div>
+
+    <div class="first_team">
+        <div class="team_navigation">
+            <a href="#goalkeepers" class="button">{{ 'team_navigation.goalkeepers' | translate }}</a>
+            <a href="#defenders" class="button">{{ 'team_navigation.defenders' | translate }}</a>
+            <a href="#midfielders" class="button">{{ 'team_navigation.midfielders' | translate }}</a>
+            <a href="#forwards" class="button">{{ 'team_navigation.forwards' | translate }}</a>
+            <a href="#coachingStaff" class="button">{{ 'team_navigation.coaching-staff' | translate }}</a>
+        </div>
+
+        <div class="team">
+            <div class="team_list_section">
+                <h1 class="team-list__title" id="goalkeepers">{{ 'team_navigation.goalkeepers' | translate }}</h1>
+                <div class="squad">
+                    <div *ngFor="let player of goalkeepers">
+                        <app-cards-goalkeepers [goalkeeper] = "player"></app-cards-goalkeepers>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_list_section">
+                <h1 class="team-list__title" id="defenders">{{ 'team_navigation.defenders' | translate }}</h1>
+                <div class="squad">
+                    <div *ngFor="let player of defenders">
+                        <app-cards-field-players [fieldPlayer] = "player"></app-cards-field-players>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_list_section">
+                <h1 class="team-list__title" id="midfielders">{{ 'team_navigation.midfielders' | translate }}</h1>
+                <div class="squad">
+                    <div *ngFor="let player of midfielders">
+                        <app-cards-field-players [fieldPlayer] = "player"></app-cards-field-players>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_list_section">
+                <h1 class="team-list__title" id="forwards">{{ 'team_navigation.forwards' | translate }}</h1>
+                <div class="squad">
+                    <div *ngFor="let player of forwards">
+                        <app-cards-field-players [fieldPlayer] = "player"></app-cards-field-players>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_list_section">
+                <h1 class="team-list__title" id="coachingStaff">{{ 'team_navigation.coaching-staff' | translate }}</h1>
+                <div class="squad">
+                    <div *ngFor="let coach of coach">
+                        <app-card-coach [coach] = "coach"></app-card-coach>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

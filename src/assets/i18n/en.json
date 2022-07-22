@@ -1,0 +1,30 @@
+{
+    "languages": {
+        "spanish": "Spanish",
+        "english": "English"
+    },
+    "header": {
+        "title": "FC Barcelona - First Team",
+        "subtitle": "The 22/23 squad is not yet complete"
+    },
+    "team_navigation": {
+        "goalkeepers": "Goalkeepers",
+        "defenders": "Defenders",
+        "midfielders": "Midfielders",
+        "forwards": "Forwards",
+        "coaching-staff": "Coaching staff"
+    },
+    "team": {
+        "squad": "Squad",
+        "goalkeeper": "Goalkeeper",
+        "defender": "Defender",
+        "midfielder": "Midfielder",
+        "forward": "Forward",
+        "coach": "Coach",
+        "games": "Appearences",
+        "clean-sheets": "Clean sheets",
+        "saves": "Saves",
+        "goals": "Goals",
+        "assists": "Assists"
+    }
+}   

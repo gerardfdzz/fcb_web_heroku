@@ -1,0 +1,36 @@
+<div class="itemBox">
+    <a [routerLink]='"goalkeeper/" + goalkeeper.name + "/"  + goalkeeper.id'>
+        <img [src]="goalkeeper.img">
+
+        <figcaption class="team-person__text">
+            <div class="team-person__info">
+                <p class="team-person__info-top">
+                    <span class="back-name">{{goalkeeper.backName}}</span>
+                    <span class="player-number" *ngIf="goalkeeper.number != 0">{{goalkeeper.number}}</span>
+                    <span class="player-name" *ngIf='goalkeeper.surname != ""'>{{goalkeeper.name}}</span>
+                    <span class="player_last-name" *ngIf='goalkeeper.surname == ""'>{{goalkeeper.name}}</span>
+                    <span class="player_last-name" *ngIf='goalkeeper.surname != ""'>{{goalkeeper.surname}}</span>
+                </p>
+                <ul class="team-person__info-bottom">
+                    <li class="player-position">{{ 'team.' + goalkeeper.position | translate }}</li>
+                </ul>
+            </div>
+
+            <div class="team-person__stats">
+                <div class="stats_goalkeepers">
+                    <p class="stats_title">{{ 'team.games' | translate }}</p>
+                    <p class="stats_number">{{goalkeeper.games}}</p>
+                </div>
+                <div class="stats_goalkeepers">
+                    <p class="stats_title">{{ 'team.clean-sheets' | translate }}</p>
+                    <p class="stats_number">{{goalkeeper.cleenSheets}}</p>
+                </div>
+                <div class="stats_goalkeepers">
+                    <p class="stats_title">{{ 'team.saves' | translate }}</p>
+                    <p class="stats_number">{{goalkeeper.saves}}</p>
+                </div>
+            </div>
+        </figcaption>
+
+    </a>
+</div>

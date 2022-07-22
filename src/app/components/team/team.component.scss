@@ -1,0 +1,119 @@
+* {
+    font-family: fcb-extra-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.team_page {
+    background: #181733;
+}
+
+.team_page_hero {
+    padding: 20px;
+}
+
+.static_hero {
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+    color: #fdc52c;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.first_team {
+    background-color: #181733;
+    padding: 0 1.6rem 0.1rem;
+}
+
+.team_navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    color: #222;
+    padding: 2.4rem;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -0.4rem 0.4rem 0 rgb(0 0 0 / 20%);
+    background: #fff;
+}
+
+.button {
+    border-radius: 0.2rem;
+    font-weight: bold;
+    word-spacing: normal;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    padding: 0.8rem 1.6rem;
+    background-color: #f8f8f8;
+    box-shadow: 0 0.1rem 0.2rem 0 rgb(0 0 0 / 15%);
+    transition: background-color .2s ease, color .2s ease;
+    z-index: 10;
+}
+
+.button:hover {
+    background-color: #154284;
+    color: #f8f8f8;
+}
+
+.team {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+.team_list_section {
+    padding: 2.8rem 0 1.6rem;
+}
+
+.team-list__title {
+    background: linear-gradient(90deg, #cd122d, #154284);
+    color: #cd122d;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.squad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    // flex-direction: row;
+    // width: 100%;
+}
+
+@media (max-width: 376px) {
+    .team-list__title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 321px) {
+    .team-list__title {
+        font-size: 25px;
+    }
+    .button {
+        font-size: .9rem;
+    }
+}

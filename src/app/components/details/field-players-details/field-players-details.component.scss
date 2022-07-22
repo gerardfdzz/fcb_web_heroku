@@ -1,0 +1,208 @@
+* {
+    font-family: fcb-extra-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.player_page {
+    background: #181733;
+}
+
+.player_info {
+    padding: 20px;
+}
+
+.player_name {
+    text-align: center;
+    color: #fdc52c;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+.player_position {
+    text-align: center;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    opacity: .8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.player_number {
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.container_player_stats {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.player_stats {
+    justify-content: center;
+}
+
+.stats {
+    color: white;
+    padding: 10px;
+}
+
+.player_stats p {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.stats_title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.stats_number {
+    color: #fdc52c;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+}
+
+.team_navigation {
+    background-color: #181733;
+    display: flex;
+    justify-content: center;
+    padding: 2.4rem;
+}
+
+.player_img {
+    width: 300px;
+}
+
+.go_back {
+    display: flex;
+    justify-content: center;
+}
+
+.player-nav_btn {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    fill: #727272;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0a0927;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    border-radius: 0.2rem;
+}
+
+.icon {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.player-nav_btn-title {
+    padding: 5px;
+}
+
+.player-nav_btn:hover {
+    fill: #0a0927;
+    background: #fdc52c;
+    color: #fff;
+    border-radius: 0.2rem;
+}
+
+@media (max-width: 376px) {
+    .player_info {
+        padding: 16px;
+    }
+
+    .player_name {
+        font-size: 30px;
+    }
+
+    .player_position {
+        font-size: .8rem;
+    }
+
+    .player_number {
+        font-size: 2.5rem;
+    }
+
+    .stats_title {
+        font-size: .8rem;
+    }
+
+    .stats_number {
+        font-size: 2rem;
+    }
+
+    .team_navigation {
+        padding: 2rem;
+    }
+
+    .player_img {
+        width: 250px;
+    }
+
+    .icon {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .player-nav_btn-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 321px) {
+    .player_info {
+        padding: 12px;
+    }
+
+    .player_name {
+        font-size: 25px;
+    }
+
+    .player_position {
+        font-size: .6rem;
+    }
+
+    .player_number {
+        font-size: 2rem;
+    }
+
+    .stats_title {
+        font-size: .6rem;
+    }
+
+    .stats_number {
+        font-size: 1.5rem;
+    }
+
+    .team_navigation {
+        padding: 1.6rem;
+    }
+
+    .player_img {
+        width: 200px;
+    }
+
+    .icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .player-nav_btn-title {
+        font-size: .8rem;
+    }
+}

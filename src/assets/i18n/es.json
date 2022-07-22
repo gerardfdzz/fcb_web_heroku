@@ -1,0 +1,30 @@
+{
+    "languages": {
+        "spanish": "Español",
+        "english": "Inglés"
+    },
+    "header": {
+        "title": "FC Barcelona - Primer Equipo",
+        "subtitle": "La plantilla de la temporada 22/23 aún no es definitiva"
+    },
+    "team_navigation": {
+        "goalkeepers": "Porteros",
+        "defenders": "Defensas",
+        "midfielders": "Centrocampistas",
+        "forwards": "Delanteros",
+        "coaching-staff": "Cuerpo técnico"
+    },
+    "team": {
+        "squad": "Plantilla",
+        "goalkeeper": "Portero",
+        "defender": "Defensa",
+        "midfielder": "Centrocampista",
+        "forward": "Delantero",
+        "coach": "Entrenador",
+        "games": "Partidos",
+        "clean-sheets": "Portería a 0",
+        "saves": "Paradas",
+        "goals": "Goles",
+        "assists": "Asistencias"
+    }
+}
