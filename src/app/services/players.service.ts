@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 const url = "/assets/images/";
 const equipo: Array<any> = [
   // Goalkeepers
-  { id: 765786, number: 1, name: "Marc-André", surname: "Ter Stegen", backName: "Stegen", img: url + 'ter_stegen.png', position: "goalkeeper", games: 327, cleenSheets: 121, saves: 767, detailsImg: url + 'ter_stegen_details.png' },
-  { id: 786578, number: 13, name: "Neto", surname: "", backName: "Neto", img: url + 'neto.png', position: "goalkeeper", games: 21, cleenSheets: 6, saves: 42, detailsImg: url + 'neto_details.png' },
+  { id: 765786, number: 1, name: "Marc-André", surname: "Ter Stegen", backName: "Stegen", img: url + 'ter_stegen.png', position: "goalkeeper", games: 327, cleanSheets: 121, saves: 767, detailsImg: url + 'ter_stegen_details.png' },
+  { id: 786578, number: 13, name: "Neto", surname: "", backName: "Neto", img: url + 'neto.png', position: "goalkeeper", games: 21, cleanSheets: 6, saves: 42, detailsImg: url + 'neto_details.png' },
   // Defenders
   { id: 456544, number: 2, name: "Sergiño", surname: "Dest", backName: "Dest", img: url + 'dest.png', position: "defender", games: 72, goals: 3, assists: 4, detailsImg: url + 'dest_details.png' },
   { id: 489562, number: 3, name: "Gerard", surname: "Piqué", backName: "Piqué", img: url + 'pique.png', position: "defender", games: 606, goals: 52, assists: 7, detailsImg: url + 'pique_details.png' },

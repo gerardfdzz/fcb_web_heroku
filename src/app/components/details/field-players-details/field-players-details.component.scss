@@ -3,82 +3,97 @@
 }
 
 .player_page {
-    background: #181733;
+    background: linear-gradient(247deg,#181733,#154284);
+}
+
+.player_hero_wrapper {
+    height: 100%;
+    padding: 0 1rem;
+    min-height: calc(98vh - 16.8rem);
+    padding-top: 2rem;
+    position: relative;
+}
+
+.team_navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.player_img {
+    width: 300px;
 }
 
 .player_info {
-    padding: 20px;
-}
-
-.player_name {
-    text-align: center;
-    color: #fdc52c;
-    margin: 0;
-    margin-bottom: 1.5rem;
+    background-color: rgba(8,14,31,.9);
+    border-radius: 10px 10px 0 0;
+    padding: 20px 0px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .player_position {
     text-align: center;
     color: white;
-    margin: 0;
     text-transform: uppercase;
     opacity: .8;
-    margin-bottom: 1rem;
-    font-size: 1rem;
     font-weight: bold;
 }
 
-.player_number {
+.player_hero_name {
+    margin-bottom: 0.5rem;
     text-align: center;
-    color: white;
-    margin: 0;
+}
+
+.player_number {
+    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,.6));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
     font-size: 3rem;
     font-weight: bold;
 }
 
+.player_name {
+    font-size: 3rem;
+    color: #fff;
+}
+
 .container_player_stats {
-    display: flex;
+    background-color: rgba(8,14,31,.9);
+    border-radius: 0 0 10px 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0px;
     text-align: center;
-    justify-content: center;
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .player_stats {
-    justify-content: center;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-around;
 }
 
-.stats {
-    color: white;
-    padding: 10px;
-}
-
-.player_stats p {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.player-hero__stats-item {
+    display: flex;
+    flex-direction: column;
 }
 
 .stats_title {
-    font-size: 1rem;
-    font-weight: bold;
+    color: #fff;
 }
 
 .stats_number {
     color: #fdc52c;
     font-size: 2.5rem;
     font-weight: bold;
-    text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
-}
-
-.team_navigation {
-    background-color: #181733;
-    display: flex;
-    justify-content: center;
-    padding: 2.4rem;
-}
-
-.player_img {
-    width: 300px;
 }
 
 .go_back {
@@ -90,23 +105,26 @@
     background: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     fill: #727272;
+    color: #0a0927;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #0a0927;
     text-transform: uppercase;
     text-decoration: none;
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 0.2rem;
+    border: none;
+}
+
+.player-nav_btn:hover {
+    cursor: pointer;
 }
 
 .icon {
-    display: inline-block;
     width: 1.6rem;
     height: 1.6rem;
-    vertical-align: middle;
     padding: 5px;
 }
 
@@ -115,10 +133,9 @@
 }
 
 .player-nav_btn:hover {
-    fill: #0a0927;
-    background: #fdc52c;
+    fill: #fff;
+    background: rgba(8,14,31,.9);
     color: #fff;
-    border-radius: 0.2rem;
 }
 
 @media (max-width: 376px) {
