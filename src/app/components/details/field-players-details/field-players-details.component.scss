@@ -3,7 +3,7 @@
 }
 
 .player_page {
-    background: linear-gradient(247deg,#181733,#154284);
+    background: linear-gradient(247deg, #181733, #154284);
 }
 
 .player_hero_wrapper {
@@ -24,7 +24,7 @@
 }
 
 .player_info {
-    background-color: rgba(8,14,31,.9);
+    background-color: rgba(8, 14, 31, .9);
     border-radius: 10px 10px 0 0;
     padding: 20px 0px;
     max-width: 400px;
@@ -46,7 +46,7 @@
 }
 
 .player_number {
-    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,.6));
+    background: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, .6));
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #fff;
@@ -60,12 +60,11 @@
 }
 
 .container_player_stats {
-    background-color: rgba(8,14,31,.9);
-    border-radius: 0 0 10px 10px;
+    background-color: rgba(8, 14, 31, .9);
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 0px;
+    padding: 0px 0px 2rem 0px;
     text-align: center;
 }
 
@@ -134,8 +133,66 @@ ul {
 
 .player-nav_btn:hover {
     fill: #fff;
-    background: rgba(8,14,31,.9);
+    background: rgba(8, 14, 31, .9);
     color: #fff;
+}
+
+.player_biography {
+    transform: translateY(-20px);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.biography_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #222;
+    padding: 1.6rem;
+    border-radius: 1.6rem 1.6rem 0 0;
+    box-shadow: 0 -.4rem .4rem 0rgba(0, 0, 0, .2);
+    background: #fff;
+}
+
+.player_bio {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px 0px 10px 10px;
+    border-radius: 0 0 1.6rem 1.6rem;
+}
+
+.content_media {
+    padding: 25px;
+    background-image: url("../../../../assets/images/stripes-content-promo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.player_bio_img {
+    max-width: 350px;
+}
+
+.content_text {
+    padding: 0.8rem 1.6rem;
+}
+
+.bio_title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+    background: linear-gradient(90deg, #cd122d, #154284);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.bio_text {
+    height: auto;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 
 @media (max-width: 376px) {
@@ -179,6 +236,18 @@ ul {
     .player-nav_btn-title {
         font-size: 1rem;
     }
+
+    .player_bio_img {
+        max-width: 300px;
+    }
+
+    .bio_title {
+        font-size: 1.5rem;
+    }
+
+    .bio_text {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 321px) {
@@ -221,5 +290,19 @@ ul {
 
     .player-nav_btn-title {
         font-size: .8rem;
+    }
+
+    .player_bio_img {
+        max-width: 250px;
+    }
+
+    .bio_title {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    .bio_text {
+        font-size: .8rem;
+        line-height: 1.5rem;
     }
 }

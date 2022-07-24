@@ -35,6 +35,21 @@
             </ul>
         </div>
 
+        <div class="player_biography">
+            <div class="biography_header"></div>
+            <div class="player_bio">
+                <div class="content_media">
+                    <img class="player_bio_img" [src]="fieldPlayer.bioImg">
+                </div>
+                <div class="content_text">
+                    <div class="bio_title" *ngIf="getLang()=='en'">{{ fieldPlayer.bioTitleEn  }}</div>
+                    <div class="bio_title" *ngIf="getLang()=='es'">{{ fieldPlayer.bioTitleEs  }}</div>
+                    <div class="bio_text" *ngIf="getLang()=='en'">{{ fieldPlayer.bioTextEn  }}</div>
+                    <div class="bio_text" *ngIf="getLang()=='es'">{{ fieldPlayer.bioTextEs  }}</div>
+                </div>
+            </div>
+        </div>
+
         <div class="go_back">
             <button (click)="navigation.goBack()" class="player-nav_btn">
                 <svg class="icon" viewBox="0 0 20 18">
