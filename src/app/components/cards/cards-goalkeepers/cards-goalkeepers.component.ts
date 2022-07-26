@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cards-goalkeepers',
@@ -7,7 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class CardsGoalkeepersComponent {
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
+
+  getLang() {
+    return this.translate.currentLang;
+  }
 
   @Input() goalkeeper?: any;
 

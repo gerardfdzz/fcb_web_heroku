@@ -17,17 +17,25 @@
             </div>
 
             <div class="team-person__stats">
-                <div class="stats_goalkeepers">
+                <div class="stats">
                     <p class="stats_title">{{ 'team.games' | translate }}</p>
                     <p class="stats_number">{{goalkeeper.games}}</p>
                 </div>
-                <div class="stats_goalkeepers">
+                <div class="stats" *ngIf="getLang()=='es'">
                     <p class="stats_title">{{ 'team.clean-sheets' | translate }}</p>
                     <p class="stats_number">{{goalkeeper.cleanSheets}}</p>
                 </div>
-                <div class="stats_goalkeepers">
+                <div class="stats" *ngIf="getLang()=='es'">
                     <p class="stats_title">{{ 'team.saves' | translate }}</p>
                     <p class="stats_number">{{goalkeeper.saves}}</p>
+                </div>
+                <div class="stats" *ngIf="getLang()=='en'">
+                    <p class="stats_title">{{ 'team.saves' | translate }}</p>
+                    <p class="stats_number">{{goalkeeper.saves}}</p>
+                </div>
+                <div class="stats" *ngIf="getLang()=='en'">
+                    <p class="stats_title">{{ 'team.clean-sheets' | translate }}</p>
+                    <p class="stats_number">{{goalkeeper.cleanSheets}}</p>
                 </div>
             </div>
         </figcaption>
