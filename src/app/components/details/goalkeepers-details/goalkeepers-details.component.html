@@ -21,15 +21,23 @@
                     </li>
                 </div>
                 <div class="player-hero__stats--single-stat">
-                    <li class="player-hero__stats-item">
+                    <li class="player-hero__stats-item" *ngIf="getLang()=='es'">
                         <div class="stats_title">{{ 'team.clean-sheets' | translate }}</div>
                         <div class="stats_number">{{ goalkeeper.cleanSheets }}</div>
                     </li>
-                </div>
-                <div class="player-hero__stats--single-stat">
-                    <li class="player-hero__stats-item">
+                    <li class="player-hero__stats-item" *ngIf="getLang()=='en'">
                         <div class="stats_title">{{ 'team.saves' | translate }}</div>
                         <div class="stats_number">{{ goalkeeper.saves }}</div>
+                    </li>
+                </div>
+                <div class="player-hero__stats--single-stat">
+                    <li class="player-hero__stats-item" *ngIf="getLang()=='es'">
+                        <div class="stats_title">{{ 'team.saves' | translate }}</div>
+                        <div class="stats_number">{{ goalkeeper.saves }}</div>
+                    </li>
+                    <li class="player-hero__stats-item" *ngIf="getLang()=='en'">
+                        <div class="stats_title">{{ 'team.clean-sheets' | translate }}</div>
+                        <div class="stats_number">{{ goalkeeper.cleanSheets }}</div>
                     </li>
                 </div>
             </ul>
@@ -42,10 +50,10 @@
                     <img class="player_bio_img" [src]="goalkeeper.bioImg">
                 </div>
                 <div class="content_text">
-                    <div class="bio_title" *ngIf="getLang()=='en'">{{ goalkeeper.bioTitleEn  }}</div>
-                    <div class="bio_title" *ngIf="getLang()=='es'">{{ goalkeeper.bioTitleEs  }}</div>
-                    <div class="bio_text" *ngIf="getLang()=='en'">{{ goalkeeper.bioTextEn  }}</div>
-                    <div class="bio_text" *ngIf="getLang()=='es'">{{ goalkeeper.bioTextEs  }}</div>
+                    <div class="bio_title" *ngIf="getLang()=='en'">{{ goalkeeper.bioTitleEn }}</div>
+                    <div class="bio_title" *ngIf="getLang()=='es'">{{ goalkeeper.bioTitleEs }}</div>
+                    <div class="bio_text" *ngIf="getLang()=='en'">{{ goalkeeper.bioTextEn }}</div>
+                    <div class="bio_text" *ngIf="getLang()=='es'">{{ goalkeeper.bioTextEs }}</div>
                 </div>
             </div>
         </div>
@@ -60,7 +68,7 @@
                 <span class="player-nav_btn-title">{{ 'team.squad' | translate }}</span>
             </button>
         </div>
-        
+
         <!-- TODO -->
         <!-- (click)="reloadCurrentPage()" -->
         <!-- <img class="next_player_img" [src]="goalkeeper.detailsImg"> -->
