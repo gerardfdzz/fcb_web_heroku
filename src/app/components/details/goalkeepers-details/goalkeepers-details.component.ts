@@ -14,7 +14,7 @@ export class GoalkeepersDetailsComponent implements OnInit {
   id: any;
   goalkeeper: any;
 
-  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation:NavigationService, private translate: TranslateService) {
+  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation: NavigationService, private translate: TranslateService) {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
 
     this.goalkeeper = this.playersService.getPlayerById(this.id);
@@ -26,7 +26,16 @@ export class GoalkeepersDetailsComponent implements OnInit {
     return this.translate.currentLang;
   }
 
+  // reloadCurrentPage() {
+  //   window.location.reload();
+  // }
+
+  allPlayers: any = this.playersService.getAllPlayers();
+
   ngOnInit(): void {
+    console.log(this.allPlayers)
+    console.log(this.goalkeeper)
+    console.log(this.id)
   }
 
 }

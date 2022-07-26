@@ -77,7 +77,14 @@ ul {
 .player_stats {
     display: flex;
     text-transform: uppercase;
-    justify-content: space-around;
+    /* justify-content: center; */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.player-hero__stats--single-stat {
+    width: 33.33%;
 }
 
 .player-hero__stats-item {
@@ -90,7 +97,7 @@ ul {
 }
 
 .stats_number {
-    color: #fdc52c;
+    color: #e0b029;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -98,6 +105,15 @@ ul {
 .go_back {
     display: flex;
     justify-content: center;
+}
+
+.next_player {
+    display: flex;
+    justify-content: center;
+}
+
+.routerLink {
+    text-decoration: none;
 }
 
 .player-nav_btn {
@@ -171,7 +187,7 @@ ul {
 }
 
 .player_bio_img {
-    max-width: 350px;
+    width: 350px;
 }
 
 .content_text {
@@ -195,13 +211,14 @@ ul {
     line-height: 2rem;
 }
 
-@media (max-width: 376px) {
+
+@media (min-width:375px) and (max-width:424px) {
     .player_info {
         padding: 16px;
     }
 
     .player_name {
-        font-size: 30px;
+        font-size: 2.4rem;
     }
 
     .player_position {
@@ -209,7 +226,7 @@ ul {
     }
 
     .player_number {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     .stats_title {
@@ -218,10 +235,6 @@ ul {
 
     .stats_number {
         font-size: 2rem;
-    }
-
-    .team_navigation {
-        padding: 2rem;
     }
 
     .player_img {
@@ -238,7 +251,7 @@ ul {
     }
 
     .player_bio_img {
-        max-width: 300px;
+        width: 300px;
     }
 
     .bio_title {
@@ -250,13 +263,13 @@ ul {
     }
 }
 
-@media (max-width: 321px) {
+@media (min-width:320px) and (max-width:374px) {
     .player_info {
         padding: 12px;
     }
 
     .player_name {
-        font-size: 25px;
+        font-size: 2rem;
     }
 
     .player_position {
@@ -275,10 +288,6 @@ ul {
         font-size: 1.5rem;
     }
 
-    .team_navigation {
-        padding: 1.6rem;
-    }
-
     .player_img {
         width: 200px;
     }
@@ -293,7 +302,7 @@ ul {
     }
 
     .player_bio_img {
-        max-width: 250px;
+        width: 250px;
     }
 
     .bio_title {

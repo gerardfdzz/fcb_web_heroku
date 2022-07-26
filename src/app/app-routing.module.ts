@@ -6,8 +6,12 @@ import { FieldPlayersDetailsComponent } from './components/details/field-players
 
 const routes: Routes = [
   { path: "", component: TeamComponent },
-  { path: "goalkeeper/:name/:id", component: GoalkeepersDetailsComponent },
-  { path: "fieldPlayer/:name/:id", component: FieldPlayersDetailsComponent }
+  { path: "goalkeeper/:id", component: GoalkeepersDetailsComponent },
+  { path: "goalkeeper/:id/goalkeeper/:id", redirectTo: "goalkeeper/:id", pathMatch: "full" },
+  { path: "goalkeeper/:id/fieldPlayer/:id", redirectTo: "fieldPlayer/:id", pathMatch: "full" },
+  { path: "fieldPlayer/:id", component: FieldPlayersDetailsComponent },
+  { path: "fieldPlayer/:id/fieldPlayer/:id", redirectTo: "fieldPlayer/:id", pathMatch: "full" },
+  { path: "fieldPlayer/:id/goalkeeper/:id", redirectTo: "goalkeeper/:id", pathMatch: "full" }
 ];
 
 @NgModule({
