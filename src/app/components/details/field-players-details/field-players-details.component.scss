@@ -106,6 +106,7 @@ ul {
 .go_back {
     display: flex;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 .next_player {
@@ -128,14 +129,15 @@ ul {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     border-radius: 0.2rem;
     border: none;
 }
 
 .player-nav_btn:hover {
     cursor: pointer;
+    fill: #fff;
+    background: rgba(8, 14, 31, .9);
+    color: #fff;
 }
 
 .icon {
@@ -146,12 +148,6 @@ ul {
 
 .player-nav_btn-title {
     padding: 5px;
-}
-
-.player-nav_btn:hover {
-    fill: #fff;
-    background: rgba(8, 14, 31, .9);
-    color: #fff;
 }
 
 .player_biography {
@@ -182,7 +178,7 @@ ul {
 
 .content_media {
     padding: 25px;
-    background-image: url("../../../../assets/images/stripes-content-promo.png");
+    background-image: url("../../../../assets/images/stripes.png");
     background-size: contain;
     background-repeat: no-repeat;
 }

@@ -5,7 +5,14 @@
     margin: 10px 6px;
     display: block;
     overflow: hidden;
-    transition: transform 0.5s;
+    transition: .5s;
+    border: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #cd122d 0, #154284);
+}
+
+.itemBox:hover {
+    border-image-source: linear-gradient(to left, #cd122d 0, #154284);
 }
 
 .itemBox img {
@@ -22,8 +29,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgb(0,0,0) 80%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 80%);
 }
 
 .team-person__info {
@@ -46,7 +53,7 @@
 }
 
 .back-name {
-    background: linear-gradient(180deg,hsla(0,0%,93%,.2),hsla(0,0%,100%,0) 90%);
+    background: linear-gradient(180deg, hsla(0, 0%, 93%, .2), hsla(0, 0%, 100%, 0) 90%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #fff;
