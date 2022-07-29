@@ -17,17 +17,20 @@
 .team_navigation {
     display: flex;
     justify-content: center;
+    padding: 0 25px;
 }
 
 .player_img {
-    width: 300px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
 }
 
 .player_info {
     background-color: rgba(8, 14, 31, .9);
     border-radius: 10px 10px 0 0;
     padding: 20px 0px;
-    max-width: 400px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -61,7 +64,7 @@
 
 .container_player_stats {
     background-color: rgba(8, 14, 31, .9);
-    max-width: 400px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 0px 2rem 0px;
@@ -77,7 +80,6 @@ ul {
 .player_stats {
     display: flex;
     text-transform: uppercase;
-    /* justify-content: center; */
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -152,7 +154,7 @@ ul {
 
 .player_biography {
     transform: translateY(-20px);
-    max-width: 400px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -184,7 +186,8 @@ ul {
 }
 
 .player_bio_img {
-    width: 350px;
+    width: 100%;
+    height: auto;
 }
 
 .content_text {
@@ -234,10 +237,6 @@ ul {
         font-size: 2rem;
     }
 
-    .player_img {
-        width: 250px;
-    }
-
     .icon {
         width: 1.3rem;
         height: 1.3rem;
@@ -245,10 +244,6 @@ ul {
 
     .player-nav_btn-title {
         font-size: 1rem;
-    }
-
-    .player_bio_img {
-        width: 300px;
     }
 
     .bio_title {
@@ -285,10 +280,6 @@ ul {
         font-size: 1.5rem;
     }
 
-    .player_img {
-        width: 200px;
-    }
-
     .icon {
         width: 1rem;
         height: 1rem;
@@ -296,10 +287,6 @@ ul {
 
     .player-nav_btn-title {
         font-size: .8rem;
-    }
-
-    .player_bio_img {
-        width: 250px;
     }
 
     .bio_title {

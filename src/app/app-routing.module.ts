@@ -11,7 +11,22 @@ const routes: Routes = [
   { path: "goalkeeper/:id/fieldPlayer/:id", redirectTo: "fieldPlayer/:id", pathMatch: "full" },
   { path: "fieldPlayer/:id", component: FieldPlayersDetailsComponent },
   { path: "fieldPlayer/:id/fieldPlayer/:id", redirectTo: "fieldPlayer/:id", pathMatch: "full" },
-  { path: "fieldPlayer/:id/goalkeeper/:id", redirectTo: "goalkeeper/:id", pathMatch: "full" }
+  { path: "fieldPlayer/:id/goalkeeper/:id", redirectTo: "goalkeeper/:id", pathMatch: "full" },
+
+  {
+    path: "",
+    component: TeamComponent,
+    children: [
+      {
+        path: "goalkeeper/:id",
+        component: GoalkeepersDetailsComponent,
+      },
+      {
+        path: "fieldPlayer/:id",
+        component: FieldPlayersDetailsComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

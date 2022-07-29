@@ -72,8 +72,8 @@
         <!-- TODO -->
         <!-- (click)="reloadCurrentPage()" -->
         <!-- <img class="next_player_img" [src]="goalkeeper.detailsImg"> -->
-        <!-- <div class="next_player" *ngIf="goalkeeper.id == 1">
-            <a [routerLink]='"goalkeeper/" + (goalkeeper.id + 1)' class="routerLink">
+        <div class="next_player" *ngIf="id == 1">
+            <a [routerLink]='"goalkeeper/" + nextPlayerId' class="routerLink">
                 <button class="player-nav_btn" >
                     <svg class="icon" viewBox="0 0 20 18">
                         <path
@@ -85,8 +85,8 @@
             </a>
         </div>
 
-        <div class="next_player" *ngIf="goalkeeper.id == 2">
-            <a [routerLink]='"fieldPlayer/" + (goalkeeper.id + 1)' class="routerLink">
+        <div class="next_player" *ngIf="id == 2">
+            <a [routerLink]='"fieldPlayer/" + nextPlayerId' class="routerLink">
                 <button class="player-nav_btn">
                     <svg class="icon" viewBox="0 0 20 18">
                         <path
@@ -96,7 +96,7 @@
                     <span class="player-nav_btn-title">Next player</span>
                 </button>
             </a>
-        </div> -->
+        </div>
 
     </div>
 </main>
