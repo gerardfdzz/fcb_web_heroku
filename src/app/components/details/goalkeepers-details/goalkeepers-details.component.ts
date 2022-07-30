@@ -3,6 +3,7 @@ import { PlayersService } from 'src/app/services/players.service';
 import { ActivatedRoute } from '@angular/router';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-goalkeepers-details',
@@ -14,8 +15,9 @@ export class GoalkeepersDetailsComponent implements OnInit {
   id: any;
   goalkeeper: any;
   nextPlayerId: any;
+  previousPlayerId: any;
 
-  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation: NavigationService, private translate: TranslateService) {
+  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation: NavigationService, private translate: TranslateService, public router: Router) {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
 
     this.goalkeeper = this.playersService.getPlayerById(this.id);
@@ -23,23 +25,22 @@ export class GoalkeepersDetailsComponent implements OnInit {
     this.navigation.startSaveHistory();
 
     this.nextPlayerId = this.goalkeeper.id + 1;
+
+    if (this.goalkeeper.id == 1) {
+      this.previousPlayerId = 25;
+    } else {
+      this.previousPlayerId = this.goalkeeper.id - 1;
+    }
   }
 
   getLang() {
     return this.translate.currentLang;
   }
 
-  // reloadCurrentPage() {
-  //   window.location.reload();
-  // }
-
   allPlayers: any = this.playersService.getAllPlayers();
 
   ngOnInit(): void {
-    console.log(this.allPlayers);
-    console.log(this.goalkeeper);
-    console.log("this.id: " + this.id);
-    console.log("this.nextPlayer: " + this.nextPlayerId);
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
 }

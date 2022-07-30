@@ -105,51 +105,66 @@ ul {
     font-weight: bold;
 }
 
-.go_back {
+// .go_back {
+//     display: flex;
+//     justify-content: center;
+//     padding-bottom: 20px;
+// }
+
+.next_player {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
 }
 
-.next_player {
-    display: flex;
+.player_link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    width: 5rem;
+    height: 3rem;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.player_btn {
+    width: 5rem;
+    height: 3rem;
     justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    fill: #fff;
+    background: #0a0927;
+}
+
+.back_to_squad_btn {
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    background: #fff;
+    fill: #0a0927;
+}
+
+.icon {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
 }
 
 .routerLink {
     text-decoration: none;
 }
 
-.player-nav_btn {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    fill: #727272;
-    color: #0a0927;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 0.2rem;
-    border: none;
-}
-
-.player-nav_btn:hover {
-    cursor: pointer;
-    fill: #fff;
-    background: rgba(8, 14, 31, .9);
-    color: #fff;
-}
-
-.icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    padding: 5px;
-}
-
 .player-nav_btn-title {
-    padding: 5px;
+    color: #0a0927;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .player_biography {
