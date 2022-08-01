@@ -14,8 +14,11 @@ export class FieldPlayersDetailsComponent implements OnInit {
 
   id: any;
   fieldPlayer: any;
-  nextPlayerId: any;
+  previousPlayer: any;
+  nextPlayer: any;
   previousPlayerId: any;
+  nextPlayerId: any;
+  allPlayers: any;
 
   constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation: NavigationService, private translate: TranslateService, public router: Router) {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
@@ -24,10 +27,16 @@ export class FieldPlayersDetailsComponent implements OnInit {
 
     this.navigation.startSaveHistory();
 
+    this.allPlayers = this.playersService.getAllPlayers();
+
+    this.previousPlayer = this.allPlayers[this.id - 2];
+    this.nextPlayer = this.allPlayers[this.id];
+
     this.previousPlayerId = this.fieldPlayer.id - 1;
 
     if (this.fieldPlayer.id == 25) {
       this.nextPlayerId = 1;
+      this.nextPlayer = this.allPlayers[0];
     } else {
       this.nextPlayerId = this.fieldPlayer.id + 1;
     }

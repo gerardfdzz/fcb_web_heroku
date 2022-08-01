@@ -14,9 +14,12 @@ export class GoalkeepersDetailsComponent implements OnInit {
 
   id: any;
   goalkeeper: any;
-  nextPlayerId: any;
+  previousPlayer: any;
+  nextPlayer: any;
   previousPlayerId: any;
-
+  nextPlayerId: any;
+  allPlayers: any;
+  
   constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation: NavigationService, private translate: TranslateService, public router: Router) {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
 
@@ -24,10 +27,16 @@ export class GoalkeepersDetailsComponent implements OnInit {
 
     this.navigation.startSaveHistory();
 
+    this.allPlayers = this.playersService.getAllPlayers();
+
+    this.previousPlayer = this.allPlayers[this.id - 2];
+    this.nextPlayer = this.allPlayers[this.id];
+
     this.nextPlayerId = this.goalkeeper.id + 1;
 
     if (this.goalkeeper.id == 1) {
       this.previousPlayerId = 25;
+      this.previousPlayer = this.allPlayers[24];
     } else {
       this.previousPlayerId = this.goalkeeper.id - 1;
     }
@@ -36,8 +45,6 @@ export class GoalkeepersDetailsComponent implements OnInit {
   getLang() {
     return this.translate.currentLang;
   }
-
-  allPlayers: any = this.playersService.getAllPlayers();
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
