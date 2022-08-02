@@ -128,7 +128,7 @@
             </a>
         </div>
 
-        <div class="navigation_players" *ngIf="nextPlayer.position == 'goalkeeper'">
+        <div class="navigation_players" *ngIf="nextPlayer.position == 'goalkeeper' || nextPlayer.position == 'coach'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
