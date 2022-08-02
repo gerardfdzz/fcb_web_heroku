@@ -98,7 +98,7 @@
         
         <!-- pay attention to *ngIf (it's the clue)  -->
         <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
-            <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
+            <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
                         <path d="M12.1 3.8v1.4H2.6l2.9 2.7-1 1L0 4.4 4.5 0l1 .9-3 2.9h9.6z"></path>
@@ -115,7 +115,7 @@
                     <span class="player-nav_btn-title">{{ 'team.squad' | translate }}</span>
                 </div>
             </a>
-            <a [routerLink]='"goalkeeper/" + nextPlayer.id' class="player_link">
+            <a [routerLink]='"fieldPlayer/" + nextPlayer.id' class="player_link">
                 <div class="next_player_nav__player">
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
