@@ -40,6 +40,7 @@ export class FieldPlayersDetailsComponent implements OnInit {
         this.nextPlayer.id = this.fieldPlayer.id + 1;
       }
     });
+    console.log(this.allPlayers.length);
   }
 
 }

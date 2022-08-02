@@ -50,8 +50,7 @@
             </div>
         </div>
 
-        <!-- TODO -->
-        <div class="navigation_players" *ngIf="id == 3">
+        <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper'">
             <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -90,7 +89,7 @@
             </a>
         </div>
         
-        <div class="navigation_players" *ngIf="id > 3 && id != 25">
+        <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -129,7 +128,7 @@
             </a>
         </div>
 
-        <div class="navigation_players" *ngIf="id == 25">
+        <div class="navigation_players" *ngIf="nextPlayer.position == 'goalkeeper'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
