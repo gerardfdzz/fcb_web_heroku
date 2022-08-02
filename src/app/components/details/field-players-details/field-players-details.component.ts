@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayersService } from 'src/app/services/players.service';
 import { ActivatedRoute } from '@angular/router';
-import { NavigationService } from 'src/app/services/navigation.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 
@@ -16,30 +15,10 @@ export class FieldPlayersDetailsComponent implements OnInit {
   fieldPlayer: any;
   previousPlayer: any;
   nextPlayer: any;
-  previousPlayerId: any;
-  nextPlayerId: any;
   allPlayers: any;
 
-  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation: NavigationService, private translate: TranslateService, public router: Router) {
+  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, private translate: TranslateService, public router: Router) {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
-
-    this.fieldPlayer = this.playersService.getPlayerById(this.id);
-
-    this.navigation.startSaveHistory();
-
-    this.allPlayers = this.playersService.getAllPlayers();
-
-    this.previousPlayer = this.allPlayers[this.id - 2];
-    this.nextPlayer = this.allPlayers[this.id];
-
-    this.previousPlayerId = this.fieldPlayer.id - 1;
-
-    if (this.fieldPlayer.id == 25) {
-      this.nextPlayerId = 1;
-      this.nextPlayer = this.allPlayers[0];
-    } else {
-      this.nextPlayerId = this.fieldPlayer.id + 1;
-    }
   }
 
   getLang() {
@@ -48,6 +27,19 @@ export class FieldPlayersDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.playersService.getPlayerById(this.id).subscribe((data) => {
+      this.fieldPlayer = data[0];
+    });
+    this.allPlayers = this.playersService.getAllPlayers().subscribe((data) => {
+      this.previousPlayer = data[this.id - 2];
+      this.nextPlayer = data[this.id];
+
+      if (this.fieldPlayer.id == (data.length - 1)) {
+        this.nextPlayer = data[0];
+      } else {
+        this.nextPlayer.id = this.fieldPlayer.id + 1;
+      }
+    });
   }
 
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayersService } from 'src/app/services/players.service';
 import { ActivatedRoute } from '@angular/router';
-import { NavigationService } from 'src/app/services/navigation.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 
@@ -16,30 +15,10 @@ export class GoalkeepersDetailsComponent implements OnInit {
   goalkeeper: any;
   previousPlayer: any;
   nextPlayer: any;
-  previousPlayerId: any;
-  nextPlayerId: any;
   allPlayers: any;
-  
-  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, public navigation: NavigationService, private translate: TranslateService, public router: Router) {
+
+  constructor(private playersService: PlayersService, private activatedRoute: ActivatedRoute, private translate: TranslateService, public router: Router) {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
-
-    this.goalkeeper = this.playersService.getPlayerById(this.id);
-
-    this.navigation.startSaveHistory();
-
-    this.allPlayers = this.playersService.getAllPlayers();
-
-    this.previousPlayer = this.allPlayers[this.id - 2];
-    this.nextPlayer = this.allPlayers[this.id];
-
-    this.nextPlayerId = this.goalkeeper.id + 1;
-
-    if (this.goalkeeper.id == 1) {
-      this.previousPlayerId = 25;
-      this.previousPlayer = this.allPlayers[24];
-    } else {
-      this.previousPlayerId = this.goalkeeper.id - 1;
-    }
   }
 
   getLang() {
@@ -48,6 +27,19 @@ export class GoalkeepersDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.playersService.getPlayerById(this.id).subscribe((data) => {
+      this.goalkeeper = data[0];
+    });
+    this.allPlayers = this.playersService.getAllPlayers().subscribe((data) => {
+      this.previousPlayer = data[this.id - 2];
+      this.nextPlayer = data[this.id];
+
+      if (this.goalkeeper.id == 1) {
+        this.previousPlayer = data[data.length - 2];
+      } else {
+        this.previousPlayer.id = this.goalkeeper.id - 1;
+      }
+    });
   }
 
 }
