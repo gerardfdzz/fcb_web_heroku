@@ -50,6 +50,7 @@
             </div>
         </div>
 
+        <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- first field player after last goalkeeper in the json file -->
         <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper'">
             <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
@@ -90,6 +91,7 @@
             </a>
         </div>
         
+        <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- players in the middle of the json file (previous and next player are field players) -->
         <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper' && nextPlayer.position != 'coach'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
@@ -130,6 +132,7 @@
             </a>
         </div>
 
+        <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- last field player -->
         <div class="navigation_players" *ngIf="nextPlayer.position == 'goalkeeper' || nextPlayer.position == 'coach'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">

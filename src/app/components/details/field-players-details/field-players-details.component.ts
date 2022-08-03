@@ -27,20 +27,20 @@ export class FieldPlayersDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+
     this.playersService.getPlayerById(this.id).subscribe((data) => {
       this.fieldPlayer = data[0];
     });
+
     this.allPlayers = this.playersService.getAllPlayers().subscribe((data) => {
       this.previousPlayer = data[this.id - 2];
-      this.nextPlayer = data[this.id];
 
       if (this.fieldPlayer.id == (data.length - 1)) {
         this.nextPlayer = data[0];
       } else {
-        this.nextPlayer.id = this.fieldPlayer.id + 1;
+        this.nextPlayer = data[this.id];
       }
     });
-    console.log(this.allPlayers.length);
   }
 
 }

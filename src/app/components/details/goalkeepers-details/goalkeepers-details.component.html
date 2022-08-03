@@ -59,6 +59,7 @@
         </div>
         
         <!-- pay attention to *ngIf (it's the clue)  -->
+        <!-- first goalkeeper of several -->
         <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position == 'goalkeeper'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
@@ -97,6 +98,7 @@
         </div>
         
         <!-- pay attention to *ngIf (it's the clue)  -->
+        <!-- first and only goalkeeper -->
         <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
@@ -135,6 +137,7 @@
         </div>
 
         <!-- pay attention to *ngIf (it's the clue)  -->
+        <!-- goalkeeper where previous and next players are goalkeepers -->
         <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper' && nextPlayer.position == 'goalkeeper'">
             <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
@@ -173,6 +176,7 @@
         </div>
 
         <!-- pay attention to *ngIf (it's the clue)  -->
+        <!-- last goalkeeper of several -->
         <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
             <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">

@@ -27,17 +27,18 @@ export class GoalkeepersDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+
     this.playersService.getPlayerById(this.id).subscribe((data) => {
       this.goalkeeper = data[0];
     });
+    
     this.allPlayers = this.playersService.getAllPlayers().subscribe((data) => {
-      this.previousPlayer = data[this.id - 2];
       this.nextPlayer = data[this.id];
-
+      
       if (this.goalkeeper.id == 1) {
         this.previousPlayer = data[data.length - 2];
       } else {
-        this.previousPlayer.id = this.goalkeeper.id - 1;
+        this.previousPlayer = data[this.id - 2];
       }
     });
   }
