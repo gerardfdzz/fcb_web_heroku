@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://my-json-server.typicode.com/gerardfdzz/fcb_data/team"
+  apiUrl: "https://heroku-hosting-json-server.herokuapp.com/team"
 };
