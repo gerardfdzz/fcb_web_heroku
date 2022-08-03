@@ -42,10 +42,10 @@
                     <img class="player_bio_img" [src]="fieldPlayer.bioImg">
                 </div>
                 <div class="content_text">
-                    <div class="bio_title" *ngIf="getLang()=='en'">{{ fieldPlayer.bioTitleEn  }}</div>
-                    <div class="bio_title" *ngIf="getLang()=='es'">{{ fieldPlayer.bioTitleEs  }}</div>
-                    <div class="bio_text" *ngIf="getLang()=='en'">{{ fieldPlayer.bioTextEn  }}</div>
-                    <div class="bio_text" *ngIf="getLang()=='es'">{{ fieldPlayer.bioTextEs  }}</div>
+                    <div class="bio_title" *ngIf="getLang()=='en'">{{ fieldPlayer.bioTitleEn }}</div>
+                    <div class="bio_title" *ngIf="getLang()=='es'">{{ fieldPlayer.bioTitleEs }}</div>
+                    <div class="bio_text" *ngIf="getLang()=='en'">{{ fieldPlayer.bioTextEn }}</div>
+                    <div class="bio_text" *ngIf="getLang()=='es'">{{ fieldPlayer.bioTextEs }}</div>
                 </div>
             </div>
         </div>
@@ -77,7 +77,11 @@
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
                         <div class="next_player_nav__name">
-                            <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span>
+                            <span class="next_player-name" *ngIf='nextPlayer.surname != ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname == ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname != ""'>{{nextPlayer.surname}}</span>
                         </div>
                     </div>
                 </div>
@@ -90,10 +94,11 @@
                 </div>
             </a>
         </div>
-        
+
         <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- players in the middle of the json file (previous and next player are field players) -->
-        <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper' && nextPlayer.position != 'coach'">
+        <div class="navigation_players"
+            *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper' && nextPlayer.position != 'coach'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -118,7 +123,11 @@
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
                         <div class="next_player_nav__name">
-                            <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span>
+                            <span class="next_player-name" *ngIf='nextPlayer.surname != ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname == ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname != ""'>{{nextPlayer.surname}}</span>
                         </div>
                     </div>
                 </div>
@@ -153,13 +162,17 @@
                     <span class="player-nav_btn-title">{{ 'team.squad' | translate }}</span>
                 </div>
             </a>
-            
+
             <a [routerLink]='"goalkeeper/" + nextPlayer.id' class="player_link">
                 <div class="next_player_nav__player">
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
                         <div class="next_player_nav__name">
-                            <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span>
+                            <span class="next_player-name" *ngIf='nextPlayer.surname != ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname == ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname != ""'>{{nextPlayer.surname}}</span>
                         </div>
                     </div>
                 </div>

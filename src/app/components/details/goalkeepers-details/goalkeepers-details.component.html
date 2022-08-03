@@ -57,10 +57,11 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- first goalkeeper of several -->
-        <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position == 'goalkeeper'">
+        <div class="navigation_players"
+            *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position == 'goalkeeper'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -83,7 +84,12 @@
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
                         <div class="next_player_nav__name">
-                            <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span>
+                            <!-- <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span> -->
+                            <span class="next_player-name" *ngIf='nextPlayer.surname != ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname == ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname != ""'>{{nextPlayer.surname}}</span>
                         </div>
                     </div>
                 </div>
@@ -96,10 +102,11 @@
                 </div>
             </a>
         </div>
-        
+
         <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- first and only goalkeeper -->
-        <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
+        <div class="navigation_players"
+            *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -122,7 +129,12 @@
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
                         <div class="next_player_nav__name">
-                            <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span>
+                            <!-- <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span> -->
+                            <span class="next_player-name" *ngIf='nextPlayer.surname != ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname == ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname != ""'>{{nextPlayer.surname}}</span>
                         </div>
                     </div>
                 </div>
@@ -138,7 +150,8 @@
 
         <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- goalkeeper where previous and next players are goalkeepers -->
-        <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper' && nextPlayer.position == 'goalkeeper'">
+        <div class="navigation_players"
+            *ngIf="previousPlayer.position == 'goalkeeper' && nextPlayer.position == 'goalkeeper'">
             <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -161,7 +174,12 @@
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
                         <div class="next_player_nav__name">
-                            <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span>
+                            <!-- <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span> -->
+                            <span class="next_player-name" *ngIf='nextPlayer.surname != ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname == ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname != ""'>{{nextPlayer.surname}}</span>
                         </div>
                     </div>
                 </div>
@@ -177,7 +195,8 @@
 
         <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- last goalkeeper of several -->
-        <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
+        <div class="navigation_players"
+            *ngIf="previousPlayer.position == 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
             <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -212,7 +231,12 @@
                     <div class="next_player_content">
                         <img class="next_player_nav_img" [src]="nextPlayer.detailsImg">
                         <div class="next_player_nav__name">
-                            <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span>
+                            <!-- <span class="next_player_name">{{ nextPlayer.name + " " + nextPlayer.surname}}</span> -->
+                            <span class="next_player-name" *ngIf='nextPlayer.surname != ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname == ""'>{{nextPlayer.name}}</span>
+                            <span class="next_player_last-name"
+                                *ngIf='nextPlayer.surname != ""'>{{nextPlayer.surname}}</span>
                         </div>
                     </div>
                 </div>

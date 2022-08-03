@@ -153,6 +153,14 @@ ul {
     transition: max-width .3s ease-out, padding .3s ease-out;
 }
 
+.next_player-name {
+    margin-right: .3rem;
+}
+
+.next_player_last-name {
+    font-weight: bold;
+}
+
 @media (min-width: 768px) {
     .player_link:hover {
         .next_player_nav__name {
