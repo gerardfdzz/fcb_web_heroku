@@ -2,8 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
+## Deploy
+The app is deployed in heroku as you can see with the following link: (https://fcb-web-gerard-fernandez.herokuapp.com/).
+
+## Data
+The application deployed on heroku, obtains the data through a json-server deployed on heroku, simulating an API (fake) (https://heroku-hosting-json-server.herokuapp.com/team).
+In local, the data is obtained from the "fcb.json" file, inside this same project.
+
 ## App running
-Type `npm run all-start` in the project console to start the 2 services, the json server and the angular.
+Type `npm run all-start` in the project console to start the 2 services (takes a few seconds), the json server (read "fcb.json" file) and the angular (run app).
 
 ## Development server
 

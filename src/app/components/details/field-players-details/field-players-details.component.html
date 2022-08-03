@@ -52,7 +52,7 @@
 
         <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- first field player after last goalkeeper in the json file -->
-        <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper'">
+        <div class="navigation_players" *ngIf="previousPlayer.position == 'goalkeeper' && nextPlayer.position != 'goalkeeper'">
             <a [routerLink]='"goalkeeper/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
@@ -143,7 +143,7 @@
 
         <!-- pay attention to *ngIf (it's the clue)  -->
         <!-- last field player -->
-        <div class="navigation_players" *ngIf="nextPlayer.position == 'goalkeeper' || nextPlayer.position == 'coach'">
+        <div class="navigation_players" *ngIf="previousPlayer.position != 'goalkeeper' && nextPlayer.position == 'goalkeeper' || nextPlayer.position == 'coach'">
             <a [routerLink]='"fieldPlayer/" + previousPlayer.id' class="player_link">
                 <div class="player_btn previous_player">
                     <svg class="icon" viewBox="0 0 12.1 8.9">
